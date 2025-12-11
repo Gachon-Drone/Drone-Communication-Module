@@ -1,4 +1,4 @@
-# 03. Network Flow Diagram (Description)
+# Network Flow Diagram (Description)
 
 This diagram illustrates:
 

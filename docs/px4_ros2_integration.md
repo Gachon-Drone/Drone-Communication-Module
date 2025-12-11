@@ -1,16 +1,16 @@
-# 05. PX4–ROS2 Integration
+# PX4–ROS2 Integration
 
 This document explains how PX4 and ROS2 interact within the communication pipeline.
 
 
-## 5.1 Overview
+## Overview
 
 PX4 handles flight control while ROS2 manages high-level logic, data handling, and communication with the server.
 
 MAVLink serves as the protocol connecting the two systems.
 
 
-## 5.2 Integration Methods
+## Integration Methods
 
 ### Option A: MAVLink Router
 - Routes PX4 telemetry to multiple endpoints
@@ -25,7 +25,7 @@ MAVLink serves as the protocol connecting the two systems.
 - Publishes PX4 data directly as ROS2 topics
 
 
-## 5.3 Common ROS2 Nodes
+## Common ROS2 Nodes
 
 - `/gps` – GPS telemetry  
 - `/attitude` – Orientation data  
@@ -33,7 +33,7 @@ MAVLink serves as the protocol connecting the two systems.
 - `/telemetry_publisher` – Sends data to server  
 
 
-## 5.4 Command Flow Example (Takeoff)
+## Command Flow Example (Takeoff)
 
 1. Server sends command `"takeoff"`  
 2. ROS2 node receives message  
@@ -42,7 +42,7 @@ MAVLink serves as the protocol connecting the two systems.
 5. PX4 acknowledges and performs takeoff  
 
 
-## 5.5 Safety Considerations
+## Safety Considerations
 
 - Heartbeat monitoring required  
 - Emergency stop command must always be available  

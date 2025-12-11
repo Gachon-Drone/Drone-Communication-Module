@@ -1,9 +1,9 @@
-# 02. Communication Architecture
+# Communication Architecture
 
 This document details the full communication architecture used in the P-Project drone system, covering protocol layers, data routes, and system functions.
 
 
-## 2.1 End-to-End Communication Overview
+## End-to-End Communication Overview
 
 The system consists of four main communication stages:
 
@@ -15,7 +15,7 @@ The system consists of four main communication stages:
 Each stage performs a specific role in ensuring low-latency, reliable drone communication.
 
 
-## 2.2 Communication Pipeline
+## Communication Pipeline
 
 ### Stage 1: PX4 → Companion Computer
 - Protocol: **MAVLink**
@@ -55,7 +55,7 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 - Client displays data and allows user control.
 
 
-## 2.3 Command Flow
+## Command Flow
 
 **Web Client → Server → Drone**
 1. User clicks "Takeoff"  
@@ -65,7 +65,7 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 5. PX4 executes command and returns acknowledgment  
 
 
-## 2.4 Telemetry Flow
+## Telemetry Flow
 
 **Drone → Server → Web Client**
 1. PX4 publishes data through MAVLink  
@@ -75,14 +75,14 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 5. Web UI displays updated values in real time  
 
 
-## 2.5 Reliability / Latency Considerations
+## Reliability / Latency Considerations
 - LTE network introduces variable latency (~50–150ms)
 - Server must handle connection drops safely
 - Command queueing and acknowledgment logs recommended
 - Heartbeat monitoring ensures fail-safe operation
 
 
-## 2.6 Architecture Diagram
+## Architecture Diagram
 
 See: `network_flow_diagram.png`
 

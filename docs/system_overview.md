@@ -1,10 +1,10 @@
-# 01. System Overview
+# System Overview
 
 This document provides an overview of the communication and control pipeline used in the P-Project drone system.  
 The system enables a drone to be monitored and controlled remotely through an LTE network, public server, and web-based interface.
 
 
-## 1.1 System Components
+## System Components
 
 ### 1) Drone (PX4 + Companion Computer)
 - PX4 Autopilot handles low-level flight control.
@@ -27,7 +27,7 @@ The system enables a drone to be monitored and controlled remotely through an LT
 - Displays live mission data and system states.
 
 
-## 1.2 High-Level Data Flow
+## High-Level Data Flow
 
 1. Drone publishes status → Companion Computer → LTE Router  
 2. LTE Router → Public Server through forwarded ports  
@@ -35,7 +35,7 @@ The system enables a drone to be monitored and controlled remotely through an LT
 4. User commands from Web UI → Server → Drone (via Companion Computer → PX4)
 
 
-## 1.3 Purpose of the System
+## Purpose of the System
 
 The primary goals of this system are:
 

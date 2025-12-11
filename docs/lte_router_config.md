@@ -1,9 +1,9 @@
-# 04. LTE Router Configuration
+# LTE Router Configuration
 
 This document describes settings required on the LTE router to enable remote drone communication over a public network.
 
 
-## 4.1 Purpose
+## Purpose
 
 The LTE router acts as a gateway allowing:
 - Drone telemetry to reach the public server
@@ -11,7 +11,7 @@ The LTE router acts as a gateway allowing:
 - Reliable long-distance operation without local network dependency
 
 
-## 4.2 Network Layout
+## Network Layout
 
 ```
 Drone (Companion Computer)
@@ -24,7 +24,7 @@ Remote Server
 ```
 
 
-## 4.3 Required Settings
+## Required Settings
 
 ### 1) Port Forwarding
 Forward ports needed for communication:
@@ -52,7 +52,7 @@ Example:
 - Ensure outbound traffic is unrestricted
 
 
-## 4.4 Connectivity Testing
+## Connectivity Testing
 
 ### Ping Test
 ```
@@ -63,7 +63,7 @@ ping <public-server-ip>
 Use external port-check tools to verify openness.
 
 
-## 4.5 Common Issues & Solutions
+## Common Issues & Solutions
 
 - **High latency:** LTE tower congestion → try different provider  
 - **No connection:** Incorrect forwarded internal IP  
