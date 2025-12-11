@@ -17,10 +17,10 @@ This includes:
 - System architecture diagrams  
 - Documentation needed for team integration and final presentation  
 
----
 
 ## Repository Structure
 
+```
 Drone-Communication-Module/
 ├── docs/
 │ ├── 01_system_overview.md
@@ -31,6 +31,7 @@ Drone-Communication-Module/
 ├── src/
 │ └── (communication code if applicable)
 └── README.md
+```
 
 ---
 
