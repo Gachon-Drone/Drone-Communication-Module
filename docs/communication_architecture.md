@@ -2,7 +2,6 @@
 
 This document details the full communication architecture used in the P-Project drone system, covering protocol layers, data routes, and system functions.
 
----
 
 ## 2.1 End-to-End Communication Overview
 
@@ -15,7 +14,6 @@ The system consists of four main communication stages:
 
 Each stage performs a specific role in ensuring low-latency, reliable drone communication.
 
----
 
 ## 2.2 Communication Pipeline
 
@@ -28,7 +26,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
   - MAVLink Router / MAVSDK / micrortps bridge  
   (Depending on implementation)
 
----
 
 ### Stage 2: Companion Computer → LTE Router
 - Communication via Ethernet/Wi-Fi cable to LTE router
@@ -39,7 +36,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 ```
 - Router handles outgoing network requests from the drone.
 
----
 
 ### Stage 3: LTE Router → Public Server
 - The router forwards ports to allow external servers to access the drone.
@@ -50,7 +46,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 - TCP/UDP sockets
 - WebSocket (if using real-time bidirectional traffic)
 
----
 
 ### Stage 4: Public Server → Web Client
 - The server exposes REST or WebSocket APIs.
@@ -59,7 +54,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 - Receiving telemetry and forwarding it to the UI
 - Client displays data and allows user control.
 
----
 
 ## 2.3 Command Flow
 
@@ -70,7 +64,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 4. Companion Computer forwards MAVLink message to PX4  
 5. PX4 executes command and returns acknowledgment  
 
----
 
 ## 2.4 Telemetry Flow
 
@@ -81,7 +74,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 4. Server stores/forwards data  
 5. Web UI displays updated values in real time  
 
----
 
 ## 2.5 Reliability / Latency Considerations
 - LTE network introduces variable latency (~50–150ms)
@@ -89,7 +81,6 @@ Each stage performs a specific role in ensuring low-latency, reliable drone comm
 - Command queueing and acknowledgment logs recommended
 - Heartbeat monitoring ensures fail-safe operation
 
----
 
 ## 2.6 Architecture Diagram
 

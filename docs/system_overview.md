@@ -3,7 +3,6 @@
 This document provides an overview of the communication and control pipeline used in the P-Project drone system.  
 The system enables a drone to be monitored and controlled remotely through an LTE network, public server, and web-based interface.
 
----
 
 ## 1.1 System Components
 
@@ -27,7 +26,6 @@ The system enables a drone to be monitored and controlled remotely through an LT
 - Sends control commands such as Arm, Takeoff, Move, Land.
 - Displays live mission data and system states.
 
----
 
 ## 1.2 High-Level Data Flow
 
@@ -36,7 +34,6 @@ The system enables a drone to be monitored and controlled remotely through an LT
 3. Server → Web UI for monitoring  
 4. User commands from Web UI → Server → Drone (via Companion Computer → PX4)
 
----
 
 ## 1.3 Purpose of the System
 
@@ -47,7 +44,6 @@ The primary goals of this system are:
 - Provide a **structured and modular network architecture** for team development.
 - Allow real-time **monitoring of telemetry data** such as GPS, attitude, and mission status.
 
----
 
 ## 1.4 System Architecture Diagram
 
