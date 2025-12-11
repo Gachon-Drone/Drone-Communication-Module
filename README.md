@@ -4,7 +4,6 @@ P-Project / Gachon-Drone
 This repository contains the communication module and system architecture used in the P-Project drone system.  
 The goal is to define and document the entire communication pipeline between the drone, LTE router, server, web interface, and ROS2/PX4 components.
 
----
 
 ## Overview
 
@@ -33,7 +32,6 @@ Drone-Communication-Module/
 └── README.md
 ```
 
----
 
 ##  System Components
 
@@ -57,7 +55,6 @@ Drone-Communication-Module/
 - Real-time monitoring  
 - Command input (Arm, Takeoff, Land, Navigation)  
 
----
 
 ##  Key Features in This Repository
 
@@ -67,7 +64,6 @@ Drone-Communication-Module/
 - PX4–ROS2 integration overview  
 - Reference code or configuration scripts (if added later)
 
----
 
 ##  How to Use
 
@@ -78,7 +74,6 @@ git clone https://github.com/Gachon-Drone/Drone-Communication-Module.git
 
 3. (Optional) Add your communication-related scripts under `src/`.
 
----
 
 ##  Author  
 **Park Subin**  
